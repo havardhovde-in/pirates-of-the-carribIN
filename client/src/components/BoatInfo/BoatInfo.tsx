@@ -4,6 +4,7 @@ import "./BoatInfo.scss";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import BoatMapMarker from "../BoatMapMarker/BoatMapMarker";
+import token from "../../constants/token";
 
 type BoatInfoTypes = {
   boats: (String | Number)[];
@@ -19,7 +20,7 @@ const BoatList: React.FC<BoatInfoTypes> = ({ boats }) => {
         method: "POST",
         headers: {
           "Content-type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_AIS_ACCESS_TOKEN}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ mmsi: boats }),
       }
