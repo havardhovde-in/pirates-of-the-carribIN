@@ -66,21 +66,8 @@ const BoatMapMarker: React.FC<BoatTypes> = ({ boat, number, boatAmount }) => {
     shadowSize: [41, 41],
   });
 
-  const redIcon = new L.Icon({
-    iconUrl:
-      "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
-    shadowUrl:
-      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-    iconSize: [30, 55],
-    iconAnchor: [-50, -41],
-    popupAnchor: [0, 0],
-    shadowSize: [41, 41],
-  });
-
   const pirateIcon = L.icon({
     iconUrl: pirateFlag,
-    // shadowUrl: 'leaf-shadow.png',
-
     iconSize: [48, 60], // size of the icon
     shadowSize: [50, 64], // size of the shadow
     iconAnchor: [20, 20], // point of the icon which will correspond to marker's location

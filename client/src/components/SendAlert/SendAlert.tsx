@@ -11,7 +11,10 @@ const SendAlert = () => {
   const handleSendAlert = () => {
     fetch("https://posnotifiedc1579bot.azurewebsites.net/api/notification", {
       method: "POST",
-      body: `${alert}`,
+      body: JSON.stringify({
+        alert: `${alert}`,
+        coords: "59.7209142, 10.692119822",
+      }),
     });
   };
 
