@@ -7,6 +7,7 @@ import token from "../../constants/token";
 
 const BoatList = () => {
   const [boats, setBoats] = useState<Array<String | Number>>([]);
+  const [mapCenter, setMapCenter] = useState<any>();
 
   const date = new Date();
   const startDate = new Date(date.setHours(date.getHours() - 1));
