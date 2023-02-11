@@ -19,7 +19,7 @@ const BoatList: React.FC<BoatInfoTypes> = ({ boats }) => {
         method: "POST",
         headers: {
           "Content-type": "application/json",
-          Authorization: `Bearer ${import.meta.env.VITE_AIS_ACCESS_TOKEN}`,
+          Authorization: `Bearer ${process.env.REACT_AIS_ACCESS_TOKEN}`,
         },
         body: JSON.stringify({ mmsi: boats }),
       }
