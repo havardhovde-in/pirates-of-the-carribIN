@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import BoatInfo from "../BoatInfo/BoatInfo";
 import SendAlert from "../SendAlert/SendAlert";
 import "./BoatList.scss";
+import token from "../../constants/token";
 
 const BoatList = () => {
   const [boats, setBoats] = useState<Array<String | Number>>([]);
@@ -19,7 +20,7 @@ const BoatList = () => {
         headers: {
           Accept: "application/json",
           "Content-type": "application/json",
-          Authorization: `Bearer ${process.env.REACT_AIS_ACCESS_TOKEN}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
           msgtimefrom: `${startDate.toISOString()}`,
